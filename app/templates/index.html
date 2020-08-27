@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- telephone-display !important -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- styles -->
+	<link rel="stylesheet" href="../static/css/style.css">
+	
+	<!-- media screen -->
+	<link rel="stylesheet" href="../static/css/media.css">
+	
+	<!-- favicon -->
+	<link rel="icon" href="../static/img/favicon.png" type="image/x-icon">
+	
+	<!-- text style: Roboto 400 and 700 -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> 
+	
+	<!-- Bootstrap for CSS -->
+	<link rel="stylesheet" href="../libs/bootstrap-4.5.0/css/bootstrap.css">
+	
+
+	<title>Flower Shop</title>
+</head>
+<body>
+	<main>
+
+		<!-- ----------------------- NAVIGATION BAR --------------------- -->
+		<nav class="navbar navbar-expand-md sticky-top">
+
+			<!-- иконка сайта -->
+			<a href="#" class="navbar-brand mr-0"><img src="../static/img/icon.png" alt=""></a>
+
+			<!-- навигационное меню - выпадайка на смартфонах и планшетах -->
+			<div class="collapse navbar-collapse m-auto order-1 order-md-0 col-md-3" id="navbar__ul__wrapper"> <!-- без collapse кнопки сразу будут развернуты -->
+				<ul class="navbar-nav nav__items__group">
+					<li class="d-flex justify-content-end nav__item"><a href="#" class="nav-link">Цветы</a></li>
+					<li class="d-flex justify-content-end nav__item"><a href="#" class="nav-link">Букеты</a></li>
+					<li class="d-flex justify-content-end nav__item"><a href="#" class="nav-link">Аксессуары</a></li>
+					<li class="d-flex justify-content-end nav__item"><a href="#" class="nav-link">Доставка</a></li>
+					<li class="d-flex justify-content-end nav__item"><a href="#" class="nav-link">О нас</a></li>
+				</ul>
+			</div>
+
+			<!-- время работы -->
+			<div class="work__time">Пн.-Пт. 10:00 - 21:00, Сб.-Вс. 10:00-20:00</div>
+
+			<!-- телефон службы -->
+			<div class="phone__num ml-auto d-none d-lg-block">+7-(495)-00-00-000</div>
+			
+			<!-- одиночная кнопка "Заказать звонок" -- Button trigger modal -->
+			<a type="button"  class="request__call d-none d-lg-block mr-xl-auto ml-auto" data-toggle="modal" data-target="#callModal">Заказать звонок</a>
+
+			<!-- окно "Корзина"-->
+			<a type="button" class="btn basket ml-auto"><img src="../static/img/basket.png">  0 руб.  <img src="../static/img/arrow_basket_1.svg" class="arrow__basket__1" alt=""> <img src="../static/img/arrow_basket_2.svg" class="arrow__basket__2" alt=""></a>
+
+			<!-- кнопка для свернувшегося меню -->      
+			<img type="button" src="../static/img/menu-icon.png" class="menu__icon navbar-toggler" data-toggle="collapse" data-target="#navbar__ul__wrapper"> 
+		</nav>
+		
+		<!-- POPUP Корзина -->
+		<div class="wrapper_popup__basket position-fixed">
+			<div class="popup__basket">
+				<div class="popup__basket__title">
+					<h6>Быстрый просмотр корзины</h6>
+					<img class="close__popup" role="button" src="../static/img/close_popup.png" alt="">  <!-- role="button" - при наведении мышка > палец -->
+				</div>
+				<div class="popup__basket__body mx-auto">
+					<p>Форма для выбранного товара</p>
+				</div>				
+				<div class="popup__basket__footer">
+					<a href="#" class="popup__goToBasket">Перейти к корзине</a>
+				</div>				
+			</div>
+		</div>
+
+		<!-- Modal window -->
+		<div class="modal fade" id="callModal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel" aria-hidden="true" >
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				  	<!-- header -->
+					<div class="modal-header">
+				 		<h5 class="modal-title m-auto" id="callModalLabel">Заказать звонок</h5>
+				  	<button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+				  	</button>
+					</div>
+					<!-- body -->
+					<div class="modal-body m-auto">
+						<input type="phone" placeholder="Введите номер...">
+						<button type="button" class="btn btn-primary">Отправить</button>
+						<div>
+							<p>Мы позвоним вам в ближайшее время</p>
+						</div>
+					</div>
+					<!-- footer -->
+					<div class="modal-footer">
+					<!-- buttons for close  -->
+				  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+					</div>
+			  </div>
+			</div>
+		</div>
+
+
+		<!-- ------------------------------------- HEADER ----------------------------------- -->
+		<header class="header" id="header">
+			
+			<!-- Социальные сети -->
+			<div class="social__group">
+				<img src="../static/img/wave1.png" alt="" class="wave__wrapper mx-auto">
+				<a href="#" class=""><img src="../static/img/vk.png" alt="" class="vk__icon"></a>
+				<a href="#" class=""><img src="../static/img/insta.png" alt="" class="insta__icon"></a>
+				<a href="#" class=""><img src="../static/img/twitter.png" alt="" class="twitter__icon"></a>
+				<a href="#" class=""><img src="../static/img/youTube.png" alt="" class="youTube__icon"></a>
+				<img src="../static/img/wave2.png" alt="" class="wave__wrapper mx-auto">
+				<img src="../static/img/followUs.png" alt="" class="follow__us">		
+			</div>
+
+			<!-- Обертка цветов и карусели -->
+			<div class="title__carousel__wrapper">
+
+				<!-- Самый большой выбор свежих цветов -->
+				<div class="header__text">
+					<h1>Самый большой выбор свежих цветов</h1>
+					<p>Мы предлагаем, огромный выбор букетов собранных нашими флористами. Выбирайте то, что по душе! 
+						Или создавайте с нами свое идеальное сочетание.</p>
+					<a href="#">Смотреть каталог</a>
+				</div>
+			
+				<!-- -------- Bootstrap Carousel--------- -->
+				<div id="carouselCaptions" class="carousel slide" data-ride="carousel"> <!-- уникальный ID у карусели -->
+
+					<!-- кнопки выбора слайда -->
+					<ol class="carousel-indicators">
+						<li class="carousel__captions active" data-target="#carouselCaptions" data-slide-to="0"></li>  <!-- active - чтоб кнопки было видно -->
+						<li class="carousel__captions" data-target="#carouselCaptions" data-slide-to="1"></li>  <!-- data-target должен совпадать с ID карусели-->
+						<li class="carousel__captions" data-target="#carouselCaptions" data-slide-to="2"></li>
+					</ol>
+
+					<!-- внутренняя карусель -->
+					<div class="carousel-inner">
+
+						<!-- 1 слайд -->
+						<div class="carousel-item active" data-interval="6000">  <!-- active - чтоб карусель было видно -->
+							<img src="../static/img/tulpani.png" class="first__slide d-block w-100" alt="..."> <!-- d-block w-100 отменяют дефолтное выравнивание изображений браузером -->
+							<div class="carousel-caption carousel__caption"> <!-- carousel-caption - для добавления надписей -->
+								<div class="carousel__block"> 
+									<div class="carousel__block__item">
+										<h6>Букет из 15 нежно-</h6>
+										<h6>розовых тюльпанов</h6>
+										<p><img src="../static/img/carousel_basket.png"> 1500 руб.</p>
+										<a href="#">Подробнее &rarr;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 2 слайд -->
+						<div class="carousel-item" data-interval="6000"> <!-- data-interval изменяет скорость смены слайдов -->
+							<img src="../static/img/rozi.png" class="second__slide d-block w-100" alt="...">
+							<div class="carousel-caption"> 
+								<div class="carousel__block"> 
+									<div class="carousel__block__item">
+										<h6>Букет кустовых роз</h6>
+										<h6>с зеленью (50 см)</h6>
+										<p><img src="../static/img/carousel_basket.png"> 3700 руб.</p>
+										<a href="#">Подробнее &rarr;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 3 слайд -->
+						<div class="carousel-item" data-interval="6000">
+							<img src="../static/img/polevie.png" class="third__slide d-block w-100" alt="...">
+							<div class="carousel-caption">
+								<div class="carousel__block"> 
+									<div class="carousel__block__item">
+										<h6>Букет из полевых </h6>
+										<h6>цветов</h6>
+										<p><img src="../static/img/carousel_basket.png"> 1100 руб.</p>
+										<a href="#">Подробнее &rarr;</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+					<!-- стрелка в правую сторону -->
+					<a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+						<img src="../static/img/Strelka_1.png" alt=""> <!-- стрелка в лево картинкой -->
+						<span class="sr-only">Previous</span>
+					</a>
+					
+					<!-- стрелка в левую сторону -->
+					<a class="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+						<img src="../static/img/Strelka_2.png" alt=""> <!-- стрелка в право картинкой -->
+						<span class="sr-only">Next</span>
+					</a>
+
+				</div>
+
+			</div>
+
+		</header>
+
+
+		<!-- ---------------- карточки "Горячие ноинки" | SECTION - 1 ---------------- -->
+		<section class="hot__new__items">
+
+			<!-- Горячие новинки: верхнее меню -->
+			<div class="hot__new__items__navbar">
+				<h1>Горячие новинки</h1>
+				<ul>
+					<li><a href="#" class="hot__navbar__item">Цветы</a></li>
+					<li><a href="#" class="hot__navbar__item">Букеты</a></li>
+					<li><a href="#" class="hot__navbar__item">Цветы в горшках</a></li>
+					<li><a href="#" class="hot__navbar__item">Аксессуары</a></li>
+				</ul>
+			</div>
+
+			<!-- Горячие новинки: карточки цветов -->
+			<div class="hot__new__items__cards">
+				<div class="hot__card">
+					<img src="../static/img/hot_podsolnuhi.png" alt="">
+					<p>13 подсолнухов в коробке</p>
+					<p>3 700 руб.</p>
+					<button>В корзину</button>
+					<div class="hot__new">new</div>
+				</div>
+				<div class="hot__card">
+					<img src="../static/img/hot_gortenzy.png" alt="">
+					<p>Гортензия</p>
+					<p>650 руб.</p>
+					<button>В корзину</button>
+					<div class="hot__new">new</div>
+				</div>
+				<div class="hot__card">
+					<img src="../static/img/hot_rose.png" alt="">
+					<p>25 алых роз</p>
+					<p>2 300 руб.</p>
+					<button>В корзину</button>
+					<div class="hot__new">new</div>
+				</div>
+				<div class="hot__card">
+					<img src="../static/img/hot_polyana.png" alt="">
+					<p>Летняя поляна в корзинке</p>
+					<p>1 900 руб.</p>
+					<button>В корзину</button>
+					<div class="hot__new">new</div>
+				</div>
+			</div>
+			
+			<!-- Кнопка: Все новинки -->
+			<div class="show__all__new__wrapper">
+				<button class="show__all__new">Показать все новинки</button>
+			</div>
+
+		</section>
+
+		
+		<!-- ---------------- карусель на JS | SECTION - 2 ---------------- -->
+		<section class="native__js__slider">
+
+			<div id="block__for__slider"> <!-- сюда поместим наш слайдер -->
+								
+				<div id="viewport__for__slider"> <!-- видимая область слайда -->
+					
+					<ul id="slider__wrapper"> <!-- список слайдов и сами слайды -->
+
+						<li class="native__slide">
+							<img src="../static/img/slider_native_1.png" alt="1" class="native__slide__img"> <!-- слайд 1 -->
+							<div class="native__slide__content">
+								<div class="native__slide__content__text">
+									<h4>Гарантия качества</h4>
+									<p>Если букет не понравится, мы его поменяем</p>
+								</div>
+								<img src="../static/img/GarantiaKachestva.png" alt="">
+							</div>
+						</li>
+
+						<li class="native__slide">
+							<img src="../static/img/slider_native_2.png" alt="2" class="native__slide__img"> <!-- слайд 2 -->
+							<div class="native__slide__content">
+								<div class="native__slide__content__text">
+									<h4>Система лояльности</h4>
+									<p>10% на бонусную карту с каждой покупки</p>
+								</div>
+								<img src="../static/img/SistemaLoyalnosty.png" alt="">
+							</div>
+						</li>
+
+						<li class="native__slide">
+							<img src="../static/img/slider_native_3.png" alt="3" class="native__slide__img"> <!-- слайд 3 -->
+							<div class="native__slide__content">
+								<div class="native__slide__content__text">
+									<h4>Срочная доставка</h4>
+									<p>В Москве отправка букета в течение <br> 2 часов с момента оформления заказа</p>
+								</div>
+								<img src="../static/img/FastDeliver.png" alt="">
+							</div>
+						</li>
+
+						<li class="native__slide">
+							<img src="../static/img/slider_native_1.png" alt="4" class="native__slide__img"> <!-- слайд 4 -->
+							<div class="native__slide__content">
+								<div class="native__slide__content__text">
+									<h4>Гарантия качества</h4>
+									<p>Если букет не понравится, мы его поменяем</p>
+								</div>
+								<img src="../static/img/GarantiaKachestva.png" alt="">
+							</div>
+						</li>
+
+						<li class="native__slide">
+							<img src="../static/img/slider_native_2.png" alt="4" class="native__slide__img"> <!-- слайд 4 -->
+							<div class="native__slide__content">
+								<div class="native__slide__content__text">
+									<h4>Система лояльности</h4>
+									<p>10% на бонусную карту с каждой покупки</p>
+								</div>
+								<img src="../static/img/SistemaLoyalnosty.png" alt="">
+							</div>
+						</li>
+
+					</ul>			
+			
+				</div>
+								
+				<div id="prev__btn"></div>
+				<div id="next__btn"></div>
+								
+				<ul id="nav__btns">
+					<li class="slide__nav__btn"></li>
+					<li class="slide__nav__btn"></li>
+					<li class="slide__nav__btn"></li>
+			</ul>
+										
+			</div>
+
+		</section>
+
+
+	</main>
+
+	<!-- -------------------------Vendor scripts------------------------- -->
+
+	<!-- Add jQuery -->
+	<script src="../libs/jQuery/jquery-3.5.1.min.js"></script>
+
+	<!-- Bootstrap for JS (all 3 line)-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="../libs/bootstrap-4.5.0/js/bootstrap.js"></script>
+
+	<!-- User scripts -->
+	<script src="../static/js/script.js"></script>
+	<script src="../static/js/temp.js"></script>
+</body>
+</html> 
